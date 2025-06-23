@@ -116,7 +116,7 @@ nexomarket-platform/
 └── README.md
 ---
 📁 Each microservice must contain
-```tree
+
 microservice_root/
 ├── app/ o src/               # Código fuente
 ├── Dockerfile                # Configuración de contenedor
