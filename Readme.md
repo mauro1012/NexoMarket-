@@ -56,58 +56,73 @@ Each microservice can be deployed independently via Docker or together using Doc
 
 ---
 
-## 📁 Repository Structure
-nexomarket-platform/
-├── user_security_domain/
-│   ├── auth_service/              # Autenticación (JWT)
-│   ├── user_service/              # Gestión de usuarios
-│   ├── authorization_service/     # Control de acceso
-│   └── auditlog_service/          # Registro de auditoría
+# 📁 Repository Structure - NexoMarket Platform
 
-├── sales_pos_domain/
-│   ├── sales_service/             # Procesamiento de ventas
-│   ├── discounts_service/         # Descuentos y promociones
-│   ├── payment_gateway_service/   # Pasarela de pagos
-│   ├── receipt_service/           # Generación de recibos
-│   ├── returns_service/           # Devoluciones y reembolsos
-│   ├── cash_register_service/     # Cuadre de caja
-│   └── sales_report_service/      # Reportes de ventas
+This repository is structured by **business domain**, where each domain contains its own group of microservices. Each microservice is independently containerized and deployed using Docker, and may use different languages and databases according to its purpose.
 
-├── inventory_domain/
-│   ├── product_catalog_service/   # Productos y categorías
-│   ├── stock_service/             # Control de stock
-│   ├── batch_tracking_service/    # Lotes y caducidades
-│   ├── reorder_alert_service/     # Alertas de reposición
-│   ├── supplier_service/          # Gestión de proveedores
-│   ├── warehouse_service/         # Almacenamiento
-│   ├── inventory_movement_service/# Entradas y salidas
-│   └── inventory_report_service/  # Reportes de inventario
+---
 
-├── customer_loyalty_domain/
-│   ├── customer_profile_service/  # Perfiles de clientes
-│   ├── purchase_history_service/  # Historial de compras
-│   ├── loyalty_program_service/   # Puntos y recompensas
-│   └── customer_notifications_service/ # Alertas y notificaciones
+## 🧩 Domains and Microservices
 
-├── finance_domain/
-│   ├── cash_flow_service/         # Ingresos y egresos
-│   ├── financial_alerts_service/  # Alertas críticas
-│   └── financial_report_service/  # Reportes contables
+### 🔐 `user_security_domain/`
+- `auth_service/` – Authentication (JWT)
+- `user_service/` – User management
+- `authorization_service/` – Access control
+- `auditlog_service/` – Audit logs
 
-├── admin_support_domain/
-│   ├── user_support_service/      # Soporte técnico
-│   ├── system_config_service/     # Configuración del sistema
-│   ├── backup_recovery_service/   # Backups y recuperación
-│   └── monitoring_service/        # Métricas y logs (InfluxDB)
+---
 
-├── .github/
-│   └── workflows/
-│       ├── deploy_auth.yml
-│       ├── deploy_sales.yml
-│       ├── ...
-│       └── deploy_all_microservices.yml
+### 🛒 `sales_pos_domain/`
+- `sales_service/` – Sales processing
+- `discounts_service/` – Discounts and promotions
+- `payment_gateway_service/` – Payment gateway
+- `receipt_service/` – Receipt generation
+- `returns_service/` – Returns and refunds
+- `cash_register_service/` – Cash register control
+- `sales_report_service/` – Sales reports
 
-└── README.md
+---
+
+### 📦 `inventory_domain/`
+- `product_catalog_service/` – Product and category management
+- `stock_service/` – Stock control
+- `batch_tracking_service/` – Batch and expiration tracking
+- `reorder_alert_service/` – Restock alerts
+- `supplier_service/` – Supplier management
+- `warehouse_service/` – Warehouse management
+- `inventory_movement_service/` – Stock movements
+- `inventory_report_service/` – Inventory reporting
+
+---
+
+### 👥 `customer_loyalty_domain/`
+- `customer_profile_service/` – Customer profiles
+- `purchase_history_service/` – Purchase history
+- `loyalty_program_service/` – Loyalty points and rewards
+- `customer_notifications_service/` – Notifications and alerts
+
+---
+
+### 💰 `finance_domain/`
+- `cash_flow_service/` – Daily cash flow
+- `financial_alerts_service/` – Financial alerts
+- `financial_report_service/` – Financial reporting
+
+---
+
+### 🛠️ `admin_support_domain/`
+- `user_support_service/` – User support and ticketing
+- `system_config_service/` – System configuration
+- `backup_recovery_service/` – Backup and recovery
+- `monitoring_service/` – Monitoring and metrics (InfluxDB)
+
+---
+
+## ⚙️ CI/CD Workflows
+
+Located in:
+
+
 
 ---
 
