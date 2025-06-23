@@ -63,64 +63,66 @@ This repository is structured by **business domain**, where each domain contains
 ---
 
 # 📁 Repository Structure
+```tree
 nexomarket-platform/
 ├── user_security_domain/
-│ ├── auth_service/ # Autenticación (JWT)
-│ ├── user_service/ # Gestión de usuarios
-│ ├── authorization_service/ # Control de acceso
-│ └── auditlog_service/ # Registro de auditoría
-
+│   ├── auth_service/           # Autenticación (JWT)
+│   ├── user_service/           # Gestión de usuarios
+│   ├── authorization_service/  # Control de acceso
+│   └── auditing_service/      # Registro de auditoría
+│
 ├── sales_pos_domain/
-│ ├── sales_service/ # Procesamiento de ventas
-│ ├── discounts_service/ # Descuentos y promociones
-│ ├── payment_gateway_service/ # Pasarela de pagos
-│ ├── receipt_service/ # Generación de recibos
-│ ├── returns_service/ # Devoluciones y reembolsos
-│ ├── cash_register_service/ # Cuadre de caja
-│ └── sales_report_service/ # Reportes de ventas
-
+│   ├── sales_service/          # Procesamiento de ventas
+│   ├── discounts_service/      # Descuentos y promociones
+│   ├── payment_gateway_service/ # Pasarela de pagos
+│   ├── receipt_service/       # Generación de recibos
+│   ├── returns_service/       # Devoluciones y reembolsos
+│   ├── cash_register_service/  # Cuadre de caja
+│   └── sales_report_service/   # Reportes de ventas
+│
 ├── inventory_domain/
-│ ├── product_catalog_service/ # Productos y categorías
-│ ├── stock_service/ # Control de stock
-│ ├── batch_tracking_service/ # Lotes y caducidades
-│ ├── reorder_alert_service/ # Alertas de reposición
-│ ├── supplier_service/ # Gestión de proveedores
-│ ├── warehouse_service/ # Almacenamiento
-│ ├── inventory_movement_service/ # Entradas y salidas
-│ └── inventory_report_service/ # Reportes de inventario
-
+│   ├── product_catalog_service/ # Productos y categorías
+│   ├── stock_service/         # Control de stock
+│   ├── batch_tracking_service/ # Lotes y caducidades
+│   ├── reorder_alert_service/  # Alertas de reposición
+│   ├── supplier_service/      # Gestión de proveedores
+│   ├── warehouse_service/     # Almacenamiento
+│   ├── inventory_movement_service/ # Entradas y salidas
+│   └── inventory_report_service/ # Reportes de inventario
+│
 ├── customer_loyalty_domain/
-│ ├── customer_profile_service/ # Perfiles de clientes
-│ ├── purchase_history_service/ # Historial de compras
-│ ├── loyalty_program_service/ # Puntos y recompensas
-│ └── customer_notifications_service/ # Alertas y notificaciones
-
+│   ├── customer_profile_service/ # Perfiles de clientes
+│   ├── purchase_history_service/ # Historial de compras
+│   ├── loyalty_program_service/ # Puntos y recompensas
+│   └── customer_notifications_service/ # Alertas y notificaciones
+│
 ├── finance_domain/
-│ ├── cash_flow_service/ # Ingresos y egresos
-│ ├── financial_alerts_service/ # Alertas críticas
-│ └── financial_report_service/ # Reportes contables
-
+│   ├── cash_flow_service/    # Ingresos y egresos
+│   ├── financial_alerts_service/ # Alertas críticas
+│   └── financial_report_service/ # Reportes contables
+│
 ├── admin_support_domain/
-│ ├── user_support_service/ # Soporte técnico
-│ ├── system_config_service/ # Configuración del sistema
-│ ├── backup_recovery_service/ # Backups y recuperación
-│ └── monitoring_service/ # Métricas y logs (InfluxDB)
-
+│   ├── user_support_service/ # Soporte técnico
+│   ├── system_config_service/ # Configuración del sistema
+│   ├── backup_recovery_service/ # Backups y recuperación
+│   └── monitoring_service/   # Métricas y logs (InfluxDB)
+│
 ├── .github/
-│ └── workflows/
-│ ├── deploy_auth.yml
-│ ├── deploy_sales.yml
-│ ├── ...
-│ └── deploy_all_microservices.yml
-
+│   └── workflows/
+│       ├── deploy_auth.yml
+│       ├── deploy_sales.yml
+│       └── deploy_all_microservices.yml
+│
 └── README.md
+---
 📁 Each microservice must contain
+```tree
 microservice_root/
-├── app/ o src/ # Código fuente
-├── Dockerfile
-├── .env.example
-├── requirements.txt / package.json / pom.xml
-├── config/
-├── routes/ o controllers/
-├── models/
-└── README.md
+├── app/ o src/               # Código fuente
+├── Dockerfile                # Configuración de contenedor
+├── .env.example              # Variables de entorno (plantilla)
+├── requirements.txt o package.json o pom.xml  # Dependencias
+├── config/                   # Archivos de configuración
+├── routes/ o controllers/    # Lógica de endpoints
+├── models/                   # Definiciones de datos
+└── README.md                 # Documentación específica
