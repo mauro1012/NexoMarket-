@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Producto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Agregar Producto</h1>
+    <form id="productoForm">
+        <input type="text" id="nombre" placeholder="Nombre del producto" required>
+        <input type="text" id="descripcion" placeholder="Descripción" required>
+        <input type="number" id="precio" placeholder="Precio" required>
+        <input type="text" id="imagenes" placeholder="URLs de imágenes separadas por comas" required>
+        <input type="text" id="categoria" placeholder="Categoría del producto" required> <!-- Nuevo campo -->
+        <button type="submit">Guardar Producto</button>
+    </form>
+    <button onclick="logout()">Cerrar sesión</button>
+
+    <!-- 📌 Cambia la ruta si el archivo está dentro de una carpeta `js/` -->
+    <script src="js/auth.js"></script>
+    <script src="js/agregarProducto.js"></script>
+</body>
+</html>
