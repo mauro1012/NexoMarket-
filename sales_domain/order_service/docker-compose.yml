@@ -1,0 +1,6 @@
+  order_service:
+    build: ./order_service
+    ports:
+      - "3002:3000"
+    environment:
+      - DATABASE_URL=mysql://user:password@mysql_db/order_db
