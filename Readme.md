@@ -2,7 +2,7 @@
 
 ---
 
-## 📌 Project Description (EN)
+## 📌 Project Description 
 
 **NexoMarket** is a complete retail management platform built using a microservices architecture. It is designed to automate key business operations such as sales, inventory control, customer management, cash register balancing, and expired product tracking — ideal for small and medium-sized stores like supermarkets, pharmacies, and convenience shops.
 
